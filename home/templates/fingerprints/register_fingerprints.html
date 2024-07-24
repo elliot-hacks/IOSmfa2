@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Fingerprints</title>
+</head>
+<body>
+    <h1>Register Fingerprints for {{ person.first_name }} {{ person.last_name }}</h1>
+    <p>Uploaded {{ fingerprints.count }} out of 6 fingerprints</p>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload Fingerprint</button>
+    </form>
+</body>
+</html>

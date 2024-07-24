@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Authenticate Fingerprint</title>
+</head>
+<body>
+    <h1>Authenticate Fingerprint</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Authenticate</button>
+    </form>
+</body>
+</html>
